@@ -30,19 +30,25 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-        .hero-image {
-            background-image: url('fotos/IMG-20240929-WA0002.jpg');
-            background-size: contain;  /* La imagen se ajusta al contenedor sin cortar, pero puede dejar espacio vacío */
-            background-position: center;  /* La imagen se centra en el contenedor */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
-            height: 400px;                /* Altura del contenedor (ajústala a tu preferencia) */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        .image-container {
+            text-align: center;   /* Centra el texto y la imagen */
+            max-width: 500px;     /* Ajusta el ancho máximo de la imagen y el contenedor */
+            margin: 0 auto;       /* Centra todo el contenedor en la página */
         }
+
+        .hero-image {
+            width: 100%;          /* La imagen ocupa todo el ancho del contenedor */
+            height: 600px;         /* Mantiene la proporción de la imagen */
+        }
+
+        .footer-text {
+            font-size: 2rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para que el texto se vea mejor */
+            padding: 10px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+        }
+
 
 
         .section-title {
@@ -80,6 +86,34 @@
         footer p {
             font-size: 1rem;
         }
+
+
+        .button {
+    display: flex;
+    justify-content: center;   /* Solo lo centra horizontalmente */
+    margin-top: 20px;          /* Ajusta la separación superior con otros elementos */
+}
+
+.botones {
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: #fff;               /* Color del texto del botón */
+    padding: 15px 30px;        /* Tamaño del botón */
+    font-size: 1.2rem;         /* Tamaño del texto */
+    border: none;              /* Sin borde */
+    border-radius: 5px;        /* Bordes redondeados */
+    text-decoration: none;     /* Quita el subrayado del enlace */
+    cursor: pointer;           /* Cambia el cursor al pasar por encima */
+    display: inline-block;     /* Asegura que el enlace se comporte como un botón */
+    transition: background-color 0.3s ease; /* Efecto de transición al pasar el ratón */
+}
+
+.botones:hover {
+    background-color: #0056b3; /* Color al hacer hover en el botón */
+}
+
+
+
+
     </style>
 </head>
 <body>
@@ -89,9 +123,9 @@
     <p>Hoy celebramos tu dia!!</p>
 </header>
 
-<div class="hero-image" >
-    <div>Te amo hoy, mañana y siempre</div>
-</div>
+<div class="image-container" >
+    <img src="fotos/IMG-20240929-WA0002.jpg" alt="Imagen" class="hero-image">
+    <div class="footer-text">Te amo hoy, mañana y siempre</div></div>
 
 <section>
     <h2 class="section-title">Un Mensaje Para Ti</h2>
@@ -111,6 +145,10 @@
         <img src="fotos/IMG-20240929-WA0010.jpg" alt="Foto 6 juntos">
     </div>
 </section>
+
+<div class="button">
+    <a href="https://baalial12.github.io/flores-amarillas-tres-main/index.html" class="botones">HAZME CLICK!!</a>
+</div>
 
 <footer>
     <p>Con todo mi amor, para ti © 2024</p>
